@@ -18,7 +18,7 @@
 
              <select class="genere">
                  <option value= " " selected> Scegli il genere  </option>
-                 <option value="rock"> Rock </option>
+                 <option value=<?php echo $value ['genre'];?>></option>
                  <option value="pop"> Pop </option>
                  <option value="jazz"> Jazz </option>
                  <option value="metal"> Metal </option>

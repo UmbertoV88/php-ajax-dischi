@@ -5,12 +5,12 @@ $(document).ready(function() {
 
 
     $.ajax({
-         url : "https://flynn.boolean.careers/exercises/api/array/music",
-         method : "get",
+         url : "dischi-ajax.php",
+         method : "GET",
+         dataType : 'json',
          success : function(data) {
              // recupero l'array che contiene tutti i dischi
-
-             var datiDischi = data.response;
+             var datiDischi = data;
              // ciclo per tutti i dischi
              for (var i = 0; i < datiDischi.length; i++) {
                  // recupero il disco corrente nell'iterazione
@@ -59,20 +59,7 @@ $(document).ready(function() {
                     $(this).fadeOut();
                 }
                 // altrimenti lo nascondo
-
             });
         };
-
-
     })
-
-
-
-
-
-
-
-
-
-
 });
